@@ -125,7 +125,7 @@ class V4V_Dataset(DataLoader):
                 logger.debug(f'Subject {vidname} has < {self.seqlen} frames with {length} frames')
                 continue
                 
-            for i in range(length // self.seqlen - 1):
+            for i in range(length // self.seqlen):
                 seqs.append((vidname, i * self.seqlen))
                 logger.debug(f'{vidname}: {i*self.seqlen}')
 
